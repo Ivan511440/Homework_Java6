@@ -75,4 +75,8 @@ public class Notebook{
         return (String.format("Производитель: %s\nМодель: %s\nОЗУ(Гб): %d\nОбъем жесткого диска(Гб): %d\nОС: %s\nЦвет: %s\n"+"\n",
         this.brand, this.model, this.ram, this.hardDisk, this.operSystem, this.color));
     }
+
+    public Integer getHardDisk() {
+        return null;
+    }
 }
