@@ -1,10 +1,12 @@
+package HomeWork_Java6;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.TreeSet;
 
 public class hw6 {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Notebook nb1 = new Notebook("Asus", "15 D543MA-DM1368", 4, 1000, "Windows 10", "черный");
         Notebook nb2 = new Notebook("Acer", "Aspire 3 A315-23-R0HR", 4, 256, "Windows 10", "черный");
         Notebook nb3 = new Notebook("Lenovo", "IdeaPad 3 15IML05", 8, 1000, "Windows 11", "серый");
@@ -62,7 +64,7 @@ public class hw6 {
         }
 
     }
-    
+    // Функция фильтра по объему ОЗУ
     public static void filterRAM(HashSet<Notebook> notebooks, Scanner scanner) {
         TreeSet<Integer> ram = new TreeSet<>();
         for (Notebook note : notebooks) {
@@ -90,7 +92,7 @@ public class hw6 {
         }
 
     }
-    
+    // Функция фильтра по объему жесткого диска
     public static void FilterHardDisk(HashSet<Notebook> notebooks, Scanner scanner) {
         TreeSet<Integer> hardDisk = new TreeSet<>();
         for (Notebook note : notebooks) {
@@ -117,7 +119,7 @@ public class hw6 {
             FilterHardDisk(notebooks, scanner);
         }
     }
-    
+    // Функция поиска по ОС
     public static void filterOS(HashSet<Notebook> notebooks, Scanner scanner) {
         TreeSet<String> operSystems = new TreeSet<>();
         for (Notebook note : notebooks) {
@@ -144,7 +146,7 @@ public class hw6 {
 
         }
     }
-    
+    // Функция поиска по цвету
     public static void filterColor(HashSet<Notebook> notebooks, Scanner scanner){
         TreeSet<String> colors = new TreeSet<>();
         for (Notebook note: notebooks){
@@ -170,7 +172,7 @@ public class hw6 {
             filterColor(notebooks, scanner);
         }
     }
-    
+    // Функция вывода полного каталога в консоль
     public static void showCatalog(HashSet<Notebook> notebooks){
         System.out.println();
         System.out.println("Полный каталог ноутбуков: ");

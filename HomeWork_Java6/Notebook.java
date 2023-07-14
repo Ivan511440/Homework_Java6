@@ -1,4 +1,6 @@
-public class Notebook{
+package HomeWork_Java6;
+
+public class Notebook {
     String brand;
     String model;
     int ram;
@@ -6,65 +8,59 @@ public class Notebook{
     String operSystem;
     String color;
 
-    public Notebook(String brand, String modei, int ram, int hardDisk, String operSystem, String color){
+    // Конструктор
+    public Notebook(String brand, String model, int ram, int hardDisk, String operSystem, String color){
         this.brand = brand.toUpperCase();
         this.model = model.toUpperCase();
         this.ram = ram;
         this.hardDisk = hardDisk;
         this.operSystem = operSystem.toUpperCase();
-        this.color = color.toUpperCase();
+        this.color = color.toLowerCase();
     }
 
-    public void setBrand(String brand){
+
+    // Сэттеры
+    public void setBrand(String brand) {
         this.brand = brand;
     }
-
-    public void setModel(String model){
+    public void setModel(String model) {
         this.model = model;
     }
-
-    public void setRam(int ram){
+    public void setRam(int ram) {
         this.ram = ram;
     }
-
-    public void setHardDisk(int hardDisk){
+    public void setHardDisk(int hardDisk) {
         this.hardDisk = hardDisk;
     }
-
-    public void setOperSystem(String operSystem){
+    public void setOperSystem(String operSystem) {
         this.operSystem = operSystem;
     }
-
-    public void setColor(String color){
+    public void setColor(String color) {
         this.color = color;
     }
 
-
-    public String getBrand(){
+    //Геттеры
+    public String getBrand() {
         return brand;
     }
-
-    public String getModel(){
+    public String getModel() {
         return model;
     }
-
-    public int getRam(){
+    public int getRam() {
         return ram;
     }
-
-    public int gstHardDisk(){
+    public int getHardDisk() {
         return hardDisk;
     }
-
-    public String getOperSystem(){
+    public String getOperSystem() {
         return operSystem;
     }
-
-    public String getColor(){
+    public String getColor() {
         return color;
     }
+    
 
-
+    //Вывод в консоль
     public void showInfo(){
         System.out.println(String.format("Производитель: %s\nМодель: %s\nОЗУ(Гб): %d\nОбъем жесткого диска(Гб): %d\nОС: %s\nЦвет: %s\n",
         this.brand, this.model, this.ram, this.hardDisk, this.operSystem, this.color));
@@ -74,9 +70,5 @@ public class Notebook{
     public String toString() {
         return (String.format("Производитель: %s\nМодель: %s\nОЗУ(Гб): %d\nОбъем жесткого диска(Гб): %d\nОС: %s\nЦвет: %s\n"+"\n",
         this.brand, this.model, this.ram, this.hardDisk, this.operSystem, this.color));
-    }
-
-    public Integer getHardDisk() {
-        return null;
     }
 }
